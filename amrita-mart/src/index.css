@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  font-family: Poppins, sans-serif;
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f0f0;
+}
+
+.main-title {
+  font-family: "DM Serif Display", sans-serif;
 }
