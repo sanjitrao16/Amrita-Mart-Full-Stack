@@ -3,6 +3,8 @@ import CartIcon from "../assets/CartIcon.svg";
 import UserIcon from "../assets/UserIcon.svg";
 import Hamburger from "../assets/Hamburger.svg";
 import Close from "../assets/Close.svg";
+import { Link } from "react-router-dom";
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,9 +67,8 @@ export default function Navbar() {
           <a href="" className="hover:text-blue-600">
             Shop
           </a>
-          <a href="" className="hover:text-blue-600">
-            Book a Cake
-          </a>
+          <Link to="/book-cake" className="hover:text-blue-600">Book a Cake</Link>
+
           <a href="" className="flex gap-2 items-center">
             <img src={CartIcon} alt="Cart" className="h-6 w-6 brightness-0" />
             Cart
