@@ -1,10 +1,9 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import CartIcon from "../assets/CartIcon.svg";
 import UserIcon from "../assets/UserIcon.svg";
 import Hamburger from "../assets/Hamburger.svg";
 import Close from "../assets/Close.svg";
-import { Link } from "react-router-dom";
-
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,14 +22,21 @@ export default function Navbar() {
         <div className="hidden lg:flex text-sm">
           <ul className="flex list-none gap-12 items-center">
             <li>
-              <a href="" className="hover:text-blue-600">
+              <NavLink
+                to="/shop"
+                className={({ isActive }) =>
+                  isActive
+                    ? "border-b-2 border-blue-600 font-bold pb-2"
+                    : "hover:text-blue-600 pb-2"
+                }
+              >
                 Shop
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="" className="hover:text-blue-600">
+              <NavLink to="/contact" className="hover:text-blue-600">
                 Contact Us
-              </a>
+              </NavLink>
             </li>
             <li>
               <a href="" className="flex gap-2 items-center">
@@ -64,10 +70,17 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="lg:hidden flex flex-col gap-4 bg-white mt-4 p-4 shadow-lg rounded-lg">
-          <a href="" className="hover:text-blue-600">
+          <NavLink
+            to="/shop"
+            className={({ isActive }) =>
+              isActive ? "text-blue-600 font-bold" : "hover:text-blue-600"
+            }
+          >
             Shop
-          </a>
-          <Link to="/book-cake" className="hover:text-blue-600">Book a Cake</Link>
+          </NavLink>
+          <NavLink to="/book-cake" className="hover:text-blue-600">
+            Book a Cake
+          </NavLink>
 
           <a href="" className="flex gap-2 items-center">
             <img src={CartIcon} alt="Cart" className="h-6 w-6 brightness-0" />
