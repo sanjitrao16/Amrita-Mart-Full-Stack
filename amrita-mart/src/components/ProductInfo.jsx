@@ -2,8 +2,11 @@ import React from "react";
 import LeftArrow from "../assets/LeftArrow.svg";
 import RightArrow from "../assets/RightArrow.svg";
 import CloseIcon from "../assets/Close.svg";
+import { useCart } from "../context/CartContext"; // Import useCart
 
 const ProductInfo = ({ product, onClose, onNavigate, hasNext, hasPrev }) => {
+  const { addToCart } = useCart(); // Get addToCart from CartContext
+
   return (
     <div
       className="fixed inset-0 bg-black/50 flex justify-center items-center p-4"
@@ -44,7 +47,10 @@ const ProductInfo = ({ product, onClose, onNavigate, hasNext, hasPrev }) => {
             <hr className="my-2 border-gray-400" />
             <p className="text-lg font-semibold">{product.price}</p>
             <p className="text-xs text-gray-500">Inclusive of all taxes.</p>
-            <button className="mt-4 bg-black cursor-pointer text-white px-4 py-2 rounded hover:bg-gray-900">
+            <button
+              className="mt-4 bg-black cursor-pointer text-white px-4 py-2 rounded hover:bg-gray-900"
+              onClick={() => addToCart(product)} // Add to cart on click
+            >
               Add to Cart
             </button>
           </div>
