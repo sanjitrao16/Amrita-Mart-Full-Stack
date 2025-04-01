@@ -85,6 +85,7 @@ const BentoGrid = () => {
         buttonColor="bg-green-600"
         buttonTextColor="text-white"
         textColor="text-green-900"
+        navigateTo="/shop"
       />
       <BentoItem
         title="Dorm & Daily Needs"
@@ -95,6 +96,7 @@ const BentoGrid = () => {
         buttonColor="bg-orange-500"
         buttonTextColor="text-white"
         textColor="text-orange-900"
+        navigateTo="/shop"
       />
       <BentoItem
         title="Fruit Frenzy!!"
