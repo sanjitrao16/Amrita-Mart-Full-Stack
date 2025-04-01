@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Notebook",
+    "category": "Stationery",
+    "price": "₹50",
+    "rating": 4,
+    "image": ""
+  },
+  {
+    "id": 2,
+    "name": "Toothpaste",
+    "category": "Personal Hygiene",
+    "price": "₹80",
+    "rating": 5,
+    "image": ""
+  },
+  {
+    "id": 3,
+    "name": "Detergent",
+    "category": "Laundry",
+    "price": "₹40",
+    "rating": 3,
+    "image": ""
+  },
+  {
+    "id": 4,
+    "name": "Pen",
+    "category": "Stationery",
+    "price": "₹60",
+    "rating": 4,
+    "image": ""
+  }
+]

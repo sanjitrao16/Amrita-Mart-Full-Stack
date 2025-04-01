@@ -4,49 +4,15 @@ import ProductInfo from "../components/ProductInfo.jsx";
 import FilterIcon from "../assets/Filters.svg";
 import PlusIcon from "../assets/PlusIcon.svg";
 import SearchIcon from "../assets/SearchIcon.svg";
+import products from "../data/products.json"; // Import JSON file
 
 const Shop = () => {
   const [activeCategory, setActiveCategory] = useState(null);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
-  const [searchQuery, setSearchQuery] = useState(""); // New search state
+  const [searchQuery, setSearchQuery] = useState("");
 
   const categories = ["Stationery", "Personal Hygiene", "Laundry"];
-
-  const products = [
-    {
-      id: 1,
-      name: "Notebook",
-      category: "Stationery",
-      price: "₹50",
-      rating: 4,
-      image: "",
-    },
-    {
-      id: 2,
-      name: "Toothpaste",
-      category: "Personal Hygiene",
-      price: "₹80",
-      rating: 5,
-      image: "",
-    },
-    {
-      id: 3,
-      name: "Detergent",
-      category: "Laundry",
-      price: "₹40",
-      rating: 3,
-      image: "",
-    },
-    {
-      id: 4,
-      name: "Pen",
-      category: "Stationery",
-      price: "₹60",
-      rating: 4,
-      image: "",
-    },
-  ];
 
   // Filter products based on active category and search query
   const filteredProducts = products
